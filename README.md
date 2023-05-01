@@ -23,7 +23,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [vet clinic] <a name="about-project"></a>
+# 📖 vet clinic <a name="about-project"></a>
 
 **vet clinic** is a relational database designed to manage and store information related to the operation of a veterinary clinic. User can use the project query to create, read, update and delete specific data from the database.
 
