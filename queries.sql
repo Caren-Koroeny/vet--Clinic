@@ -35,6 +35,7 @@ COMMIT;
 -- Verify that change was made and persists after commit.
 SELECT * FROM animals;
 
+
 -- start transaction
 BEGIN;
 -- delete all records in the animals table, then roll back the transaction
@@ -43,3 +44,9 @@ SELECT * FROM animals;
 ROLLBACK;
 -- after rollback verify if all records in the animals table still exists. 
 SELECT * FROM animals;
+
+-- start transaction
+BEGIN;
+-- Delete all animals born after Jan 1st, 2022.
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
+-- create savepoint
