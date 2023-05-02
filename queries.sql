@@ -52,3 +52,4 @@ DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 -- create savepoint
 SAVEPOINT SP1;
 -- update all animals' weight to be their weight multiplied by -1
+UPDATE animals SET weight_kg = (weight_kg * -1);
