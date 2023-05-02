@@ -40,3 +40,6 @@ BEGIN;
 -- delete all records in the animals table, then roll back the transaction
 DELETE FROM animals;
 SELECT * FROM animals;
+ROLLBACK;
+-- after rollback verify if all records in the animals table still exists. 
+SELECT * FROM animals;
