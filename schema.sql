@@ -50,3 +50,5 @@ BEGIN;
 ALTER TABLE animals ADD COLUMN species_id INT;
 -- Update made the species_id column a foreign key referencing species table
 ALTER TABLE animals ADD FOREIGN KEY(species_id) REFERENCES species(id);
+-- Update commited changes after making sure everything is fine
+COMMIT;
