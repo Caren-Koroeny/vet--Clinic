@@ -101,6 +101,10 @@ FROM animals
 JOIN species ON animals.species_id = species.id
 GROUP BY species.name;
 -- Update List all Digimon owned by Jennifer Orwell.
+SELECT animals.name as animals, full_name as owner, species.name as species
+FROM animals
+JOIN owners ON animals.owner_id = owners.id JOIN species ON animals.species_id = species.id
+WHERE owners.full_name = 'Jennifer Orwell' AND species.name = 'Digimon';
 
 -- Update List all animals owned by Dean Winchester that haven't tried to escape.
 
