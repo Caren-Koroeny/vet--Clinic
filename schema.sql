@@ -78,3 +78,11 @@ CREATE TABLE specializations(
   species INT REFERENCES species (id),
   vets INT REFERENCES vets (id)
 );
+
+-- create visits table with many-to-many relationship between animals and vets
+CREATE TABLE visits(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  animals INT REFERENCES animals(id),
+  vets INT REFERENCES vets (id),
+  date_of_visit date
+);
