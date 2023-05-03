@@ -58,3 +58,5 @@ BEGIN;
 ALTER TABLE animals ADD COLUMN owner_id INT;
 -- Update made the owner_id a foreign key referencing the owners table
 ALTER TABLE animals ADD FOREIGN KEY(owner_id) REFERENCES owners(id);
+-- Update commited changes after making sure everything is fine
+COMMIT;
