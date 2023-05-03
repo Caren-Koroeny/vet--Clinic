@@ -74,11 +74,12 @@ CREATE TABLE vets (
 
 -- create specializations table with many-to-many relationship between species and vets
 CREATE TABLE specializations(
-  id INT GENERATED ALWAYS AS IDENTITY,
-  species INT REFERENCES species (id),
-  vets INT REFERENCES vets (id)
+  species_id INT,
+  vet_id INT,
+  FOREIGN KEY(species_id) REFERENCES species(id),
+  FOREIGN KEY(vet_id) REFERENCES vets(id),
+  PRIMARY KEY (species_id, vet_id)
 );
-
 -- create visits table with many-to-many relationship between animals and vets
 CREATE TABLE visits(
   id INT GENERATED ALWAYS AS IDENTITY,
