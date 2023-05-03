@@ -32,3 +32,6 @@ CREATE TABLE IF NOT EXISTS owners(
     age INT,
     PRIMARY KEY(id)
 );
+
+-- Update drop table to make sure it does not exist
+DROP TABLE IF EXISTS species;
