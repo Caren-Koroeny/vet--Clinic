@@ -79,3 +79,8 @@ WHERE EXTRACT(YEAR FROM date_of_birth)
 BETWEEN 1990 AND 2000 
 GROUP BY animals.species_id;
 
+/* DAY 3 */
+
+SELECT name FROM animals
+JOIN owners ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Melody Pond';
