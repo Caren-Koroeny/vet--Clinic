@@ -60,3 +60,14 @@ ALTER TABLE animals ADD COLUMN owner_id INT;
 ALTER TABLE animals ADD FOREIGN KEY(owner_id) REFERENCES owners(id);
 -- Update commited changes after making sure everything is fine
 COMMIT;
+
+--DAY 4
+-- Create table called vets
+
+CREATE TABLE vets (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name varchar NOT NULL,
+    date_of_graduation date NOT NULL,
+    age INT DEFAULT 0,
+    PRIMARY KEY(id)
+);
