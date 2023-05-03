@@ -96,7 +96,10 @@ SELECT name, full_name as owners
 FROM animals JOIN owners ON owners.id = animals.owner_id;
 
 -- How many animals are there per species
-
+SELECT species.name, COUNT(animals.name)
+FROM animals
+JOIN species ON animals.species_id = species.id
+GROUP BY species.name;
 -- Update List all Digimon owned by Jennifer Orwell.
 
 -- Update List all animals owned by Dean Winchester that haven't tried to escape.
