@@ -36,3 +36,5 @@ BEGIN;
 UPDATE animals SET species_id = (SELECT id FROM species WHERE name = 'Digimon') WHERE name LIKE '%mon';
 -- All other animals are Pokemon
 UPDATE animals SET species_id = (SELECT id FROM species WHERE name = 'Pokemon') WHERE name NOT LIKE '%mon';
+-- Update commit the transaction to make sure it persists
+COMMIT;
