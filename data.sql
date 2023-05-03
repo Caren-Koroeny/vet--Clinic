@@ -51,3 +51,7 @@ WHERE name IN ('Agumon');
 UPDATE animals
 SET owner_id = (SELECT id FROM owners WHERE full_name = 'Jennifer Orwell')
 WHERE name IN ('Gabumon','Pikachu');
+
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name = 'Bob')
+WHERE name IN ('Devimon','Plantmon');
