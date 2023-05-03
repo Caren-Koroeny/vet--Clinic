@@ -21,5 +21,6 @@ ALTER TABLE animals ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY;
 --Update Add a column species of type string to your animals table.
 ALTER TABLE animals ADD COLUMN species VARCHAR(80);
 
-ALTER TABLE animals
-  ADD species VARCHAR;
+-- Day 3 query multiple table day
+-- Update drop table to make sure it does not exist
+DROP TABLE IF EXISTS owners;
