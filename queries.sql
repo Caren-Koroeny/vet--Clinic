@@ -80,7 +80,24 @@ BETWEEN 1990 AND 2000
 GROUP BY animals.species_id;
 
 /* DAY 3 */
-
+--Day 3
+-- Write queries (using JOIN) to answer the following questions:
+-- What animals belong to Melody Pond?
 SELECT name FROM animals
 JOIN owners ON animals.owner_id = owners.id
 WHERE owners.full_name = 'Melody Pond';
+
+-- Update List of all animals that are pokemon (their type is Pokemon).
+SELECT animals.name, animals.species_id, animals.owner_id, species.name as species_name FROM animals
+JOIN species ON animals.species_id = species.id
+WHERE species.name = 'Pokemon';
+-- List all owners and their animals, remember to include those that don't own any animal.
+
+
+-- How many animals are there per species
+
+-- Update List all Digimon owned by Jennifer Orwell.
+
+-- Update List all animals owned by Dean Winchester that haven't tried to escape.
+
+-- Who owns the most animals?
