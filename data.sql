@@ -38,3 +38,7 @@ UPDATE animals SET species_id = (SELECT id FROM species WHERE name = 'Digimon') 
 UPDATE animals SET species_id = (SELECT id FROM species WHERE name = 'Pokemon') WHERE name NOT LIKE '%mon';
 -- Update commit the transaction to make sure it persists
 COMMIT;
+
+-- Modify your inserted animals to include owner information (owner_id)
+-- Update start the transaction for adding owner id to animals table
+Begin;
