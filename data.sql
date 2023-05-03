@@ -42,3 +42,8 @@ COMMIT;
 -- Modify your inserted animals to include owner information (owner_id)
 -- Update start the transaction for adding owner id to animals table
 Begin;
+
+-- Update Sam Smith owns Agumon
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name = 'Sam Smith')
+WHERE name IN ('Agumon');
