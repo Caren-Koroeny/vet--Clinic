@@ -92,7 +92,8 @@ SELECT animals.name, animals.species_id, animals.owner_id, species.name as speci
 JOIN species ON animals.species_id = species.id
 WHERE species.name = 'Pokemon';
 -- List all owners and their animals, remember to include those that don't own any animal.
-
+SELECT name, full_name as owners
+FROM animals JOIN owners ON owners.id = animals.owner_id;
 
 -- How many animals are there per species
 
