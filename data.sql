@@ -158,3 +158,9 @@ INSERT INTO visits(animal_id, vet_id, date_of_visit) VALUES (
   (SELECT id FROM vets WHERE name = 'Jack Harkness'),
   '2020-11-04' 
 );
+
+INSERT INTO visits(animal_id, vet_id, date_of_visit) VALUES (
+  (SELECT id FROM animals WHERE name = 'Boarmon'),
+  (SELECT id FROM vets WHERE name = 'Maisy Smith'),
+  '2019-01-24' 
+);
