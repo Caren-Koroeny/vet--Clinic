@@ -167,3 +167,10 @@ SELECT
   FROM animals JOIN visits ON visits.animal_id = animals.id
   JOIN vets ON vets.id = visits.vet_id
   ORDER BY visits.date_of_visit DESC LIMIT 1;
+
+SELECT COUNT(visits.animal_id) AS non_specialized_visits
+  FROM visits
+  JOIN vets ON visits.vet_id = vets.id
+  JOIN animals ON visits.animal_id = animals.id
+  JOIN specializations ON specializations.species_id = vets.id
+  WHERE specializations.species_id != animals.species_id;
