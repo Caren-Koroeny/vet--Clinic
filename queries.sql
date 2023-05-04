@@ -116,3 +116,10 @@ SELECT full_name, COUNT(animals.owner_id)
 FROM animals
 JOIN owners ON owners.id = animals.owner_id
 GROUP BY full_name ORDER BY count DESC LIMIT 1;
+-- DAY 4
+SELECT animals.name, visits.date_of_visit, vets.name AS vet_name
+  FROM animals 
+  JOIN visits ON visits.animal_id = animals.id 
+  JOIN vets ON vets.id = visits.vet_id 
+  WHERE vets.name = 'William Tatcher' 
+  ORDER BY visits.date_of_visit DESC LIMIT 1;
