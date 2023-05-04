@@ -174,3 +174,12 @@ SELECT COUNT(visits.animal_id) AS non_specialized_visits
   JOIN animals ON visits.animal_id = animals.id
   JOIN specializations ON specializations.species_id = vets.id
   WHERE specializations.species_id != animals.species_id;
+
+SELECT species.name, COUNT(visits.animal_id)
+  FROM visits
+  JOIN vets ON visits.vet_id = vets.id
+  JOIN animals ON visits.animal_id = animals.id
+  JOIN species ON species.id = animals.species_id
+  WHERE vets.name = 'Maisy Smith'
+  GROUP BY species.name
+  ORDER BY COUNT DESC LIMIT 1; 
