@@ -134,3 +134,11 @@ SELECT vets.name AS vets_name, species.name AS species_name
   FROM vets 
   LEFT JOIN specializations ON vets.id = specializations.vet_id 
   LEFT JOIN species ON species.id = specializations.species_id;
+
+
+SELECT DISTINCT animals.name AS animal_name, visits.date_of_visit
+  FROM animals 
+  JOIN visits ON visits.animal_id = animals.id 
+  JOIN vets ON vets.id = visits.vet_id 
+  WHERE vets.name = 'Stephanie Mendez'
+  AND date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
