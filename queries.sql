@@ -142,3 +142,10 @@ SELECT DISTINCT animals.name AS animal_name, visits.date_of_visit
   JOIN vets ON vets.id = visits.vet_id 
   WHERE vets.name = 'Stephanie Mendez'
   AND date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+
+
+SELECT animals.name, COUNT(visits.date_of_visit) AS visit_count
+  FROM animals JOIN visits ON visits.animal_id = animals.id 
+  GROUP BY animals.name 
+  ORDER BY visit_count 
+  DESC LIMIT 1;
