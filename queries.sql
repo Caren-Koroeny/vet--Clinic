@@ -155,3 +155,15 @@ SELECT animals.name, visits.date_of_visit
   JOIN vets ON vets.id = visits.vet_id
   WHERE vets.name = 'Maisy Smith'
   ORDER BY visits.date_of_visit ASC LIMIT 1;
+
+SELECT 
+  animals.name As animal_name,
+  animals.weight_kg,
+  animals.date_of_birth,
+  animals.neutered,
+  vets.name AS vet_name,
+  vets.date_of_graduation,
+  visits.date_of_visit
+  FROM animals JOIN visits ON visits.animal_id = animals.id
+  JOIN vets ON vets.id = visits.vet_id
+  ORDER BY visits.date_of_visit DESC LIMIT 1;
