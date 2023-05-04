@@ -72,4 +72,13 @@ INSERT INTO vets(name,age,date_of_graduation) VALUES
 ('Stephanie Mendez', 64, '1981-05-04'),
 ('Jack Harkness', 38, '2008-06-08');
 
+INSERT INTO specializations(species_id,vet_id)
+SELECT species.id, vets.id FROM species JOIN vets ON species.name = 'Pokemon' AND vets.name = 'William Tatcher';
+INSERT INTO specializations(species_id,vet_id)
+SELECT species.id, vets.id FROM species JOIN vets ON species.name = 'Digimon' AND vets.name = 'Stephanie Mendez';
+INSERT INTO specializations(species_id,vet_id)
+SELECT species.id, vets.id FROM species JOIN vets ON species.name = 'Pokemon' AND vets.name = 'Stephanie Mendez';
+INSERT INTO specializations(species_id,vet_id)
+SELECT species.id, vets.id FROM species JOIN vets ON species.name = 'Digimon' AND vets.name = 'Jack Harkness';
+
 
