@@ -81,4 +81,8 @@ SELECT species.id, vets.id FROM species JOIN vets ON species.name = 'Pokemon' AN
 INSERT INTO specializations(species_id,vet_id)
 SELECT species.id, vets.id FROM species JOIN vets ON species.name = 'Digimon' AND vets.name = 'Jack Harkness';
 
-
+INSERT INTO visits(animal_id, vet_id, date_of_visit) VALUES (
+  (SELECT id FROM animals WHERE name = 'Agumon'),
+  (SELECT id FROM vets WHERE name = 'William Tatcher'),
+  '2020-05-24' 
+);
