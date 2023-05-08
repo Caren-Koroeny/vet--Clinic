@@ -23,3 +23,13 @@ CREATE TABLE medical_histories_has_treatments (
     medical_history_id int references medical_histories(id),
     treatment_id int references treatments(id),
     );
+
+CREATE TABLE invoices(
+id SERIAL PRIMARY KEY, 
+total_amount decimal, 
+generated_at TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
+payed_at  TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL, 
+medical_history_id int, 
+CONSTRAINT fk_invoice_medical FOREIGN KEY (medical_history_id)
+	REFERENCES medical_histories(id)
+);
