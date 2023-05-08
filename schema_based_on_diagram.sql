@@ -12,3 +12,9 @@ CREATE TABLE medical_histories(
 	CONSTRAINT fk_patient_medical_histories 
 	FOREIGN KEY (patient_id) REFERENCES patients(id)
 );
+
+CREATE TABLE treatments(
+id SERIAL PRIMARY KEY,
+type varchar(50),
+name varchar(50)
+); 
