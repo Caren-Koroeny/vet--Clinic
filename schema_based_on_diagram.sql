@@ -3,3 +3,12 @@ CREATE TABLE patients(
     name VARCHAR(255) NOT NULL,
     date_of_birth DATE NOT NULL
 );
+
+CREATE TABLE medical_histories(
+	id SERIAL PRIMARY KEY, 
+	admitted_at TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
+	patient_id int NOT NULL, 
+	status varchar(50), 
+	CONSTRAINT fk_patient_medical_histories 
+	FOREIGN KEY (patient_id) REFERENCES patients(id)
+);
