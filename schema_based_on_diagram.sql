@@ -18,3 +18,8 @@ id SERIAL PRIMARY KEY,
 type varchar(50),
 name varchar(50)
 ); 
+
+CREATE TABLE medical_histories_has_treatments (
+    medical_history_id int references medical_histories(id),
+    treatment_id int references treatments(id),
+    );
