@@ -193,3 +193,5 @@ SELECT species.name, COUNT(visits.animal_id)
   SELECT * FROM animals_vet WHERE vet_id = 2;
   SELECT * FROM owners where email = 'owner_18327@mail.com';
   SELECT * FROM email where email = 'owner_18327@mail.com';
+
+  
