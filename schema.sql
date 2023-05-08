@@ -99,3 +99,7 @@ INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id F
 
 -- This will add 2.500.000 owners with full_name = 'Owner <X>' and email = 'owner_<X>@email.com' (~2min approx.)
 insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
+
+-- Find a way to decrease the execution time of the first query. Look for hints in the previous lessons
+-- This will create another table called animals_visit from visit table where only animal with animal_id = 4 will be listed. Normalization applied 
+CREATE TABLE animals_visit AS SELECT * FROM visits WHERE animal_id = 4;
