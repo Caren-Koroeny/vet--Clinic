@@ -87,3 +87,8 @@ CREATE TABLE visits(
   vets INT REFERENCES vets (id),
   date_of_visit date
 );
+
+/* Vet clinic database: database performance audit */
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
