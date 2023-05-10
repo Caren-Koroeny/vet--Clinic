@@ -27,6 +27,9 @@
 
 **vet clinic** is a relational database designed to manage and store information related to the operation of a veterinary clinic. User can use the project query to create, read, update and delete specific data from the database.
 
+**Database Schema Diagram**
+
+![](./VetClinic_Diagram.png)
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
